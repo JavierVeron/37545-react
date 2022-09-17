@@ -1,14 +1,11 @@
-import React, { useContext, useState } from "react";
-import ItemCount from "../ItemCount/ItemCount";
+import React, { useContext } from "react";
 import {CartContext} from "../Context/Context";
+import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetails = ({item}) => {
     const {addItem} = useContext(CartContext);
-    const [counter, setCounter] = useState(0);
-    /* const [prod, setProd] = useState(item);
-    console.log(prod); */
-    const onAdd = (item, counter) => {
-        setCounter(counter);
+
+    const onAdd = (counter) => {//En el Desafío de Eventos había que crear esta función donde solamente iba a recibir la cantidad de Items. No hace falta pasar por parámetro el Item, porque ya está ese valor en este Componente!
         addItem(item, counter);
     }
 
@@ -20,7 +17,7 @@ const ItemDetails = ({item}) => {
                 <h3>{item.destacado}</h3>
                 <p><b>${item.precio}</b></p>
                 <p>{item.descripcion}</p>
-                <ItemCount initial={1} stock={item.stock} onAdd={onAdd} counter={counter} setCounter={setCounter} item={item} />
+                <ItemCount initial={1} stock={item.stock} onAdd={onAdd} />
             </div>
         </div>
     )
