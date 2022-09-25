@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
-//import Products from "../Products/Products";
 import ItemList from "./ItemList";
 import Loading from "../Loading/Loading";
 
@@ -25,12 +22,8 @@ const ItemListContainer = () => {
     }, [id]);
 
     return (
-        <div className="container-fluid fondo_amarillo">
-            <Header />
-            <div className="container">
+        <div className="container">
             {loading ? <Loading /> : <ItemList items={items} />}  
-            </div>
-            <Footer />    
         </div>
     )
 }
