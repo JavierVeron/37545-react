@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/37545-react/static/css/main.84e73b5d.css",
-    "main.js": "/37545-react/static/js/main.117c8027.js",
+    "main.js": "/37545-react/static/js/main.53e3d98b.js",
     "static/media/Burger-King-Logo-CMS.png": "/37545-react/static/media/Burger-King-Logo-CMS.94d011f6fd12ec1f6824.png",
     "static/media/SM-RRSS-03.png": "/37545-react/static/media/SM-RRSS-03.29ecaf0086e5df993bcd.png",
     "index.html": "/37545-react/index.html",
     "static/media/basket.svg": "/37545-react/static/media/basket.6828a7e1ac9fbafbef6699e2cc2fc37a.svg",
     "static/media/trash3.svg": "/37545-react/static/media/trash3.0821cea5d47147fcccea629c96c3df80.svg",
     "main.84e73b5d.css.map": "/37545-react/static/css/main.84e73b5d.css.map",
-    "main.117c8027.js.map": "/37545-react/static/js/main.117c8027.js.map"
+    "main.53e3d98b.js.map": "/37545-react/static/js/main.53e3d98b.js.map"
   },
   "entrypoints": [
     "static/css/main.84e73b5d.css",
-    "static/js/main.117c8027.js"
+    "static/js/main.53e3d98b.js"
   ]
 }
