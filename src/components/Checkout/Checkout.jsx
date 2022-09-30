@@ -30,6 +30,21 @@ const Checkout = () => {
             addDoc(orderCollection, order).then(({id}) => {
                 setOrderId(id);
                 clear();
+                Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "javier.veron@gmail.com",
+                    Password : "62251FAC0BB36E663F8EE3E8872E22881D4F",
+                    To : email,
+                    From : "Burger King Argentina",
+                    Subject : "Orden de Compra: " + id,
+                    Body : "<h3>Resumen de Compra</h3>"
+                    + "<p>Nombre: " + nombre + "</p>"
+                    + "<p>Email: " + email + "</p>"
+                    + "<p>Teléfono: " + telefono + "</p>"
+                    + "<p>Total: $" + order.total + "</p>"
+                }).then(
+                  message => alert(message)
+                );
             });
         }
     }
