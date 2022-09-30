@@ -20,7 +20,7 @@ const Checkout = () => {
                 items.push({id:item.id, title:item.nombre, price:item.precio, quantity:item.cantidad});
             });
             const date = new Date();
-            const now = date.getDate() + "-" + date.getMonth() + "-" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+            const now = date.getDate() + "-" + (date.getMonth()+1) + "-" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
             //Creo el objeto con todos los datos de la Compra
             const order = {buyer:buyer, items:items, date:now, total:cartSuma()};
             
